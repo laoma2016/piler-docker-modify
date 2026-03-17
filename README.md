@@ -6,10 +6,7 @@
 
 **************************************************************************************************************
 
-**If you like it, please consider a donation:**
-  
-[![paypal](https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif)](https://paypal.me/mk1676)
-
+对install-piler.sh、piler.conf.example、config\*.yaml进行了一些修改更适应国内，docker使用的一些镜像有些没有了也重新进行了修正。
 **************************************************************************************************************
 
 
