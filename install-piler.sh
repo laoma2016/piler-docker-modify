@@ -78,7 +78,8 @@ done
 
 # Docker-Compose Check
 if docker compose > /dev/null 2>&1; then
-    if docker compose version --short | grep "^2." > /dev/null 2>&1; then
+    #if docker compose version --short | grep "^2." > /dev/null 2>&1; then
+	if docker compose version --short | grep "^[2-9]." > /dev/null 2>&1; then
       COMPOSE_VERSION=native
       echo -e "${purple}Found Docker Compose Plugin (native).${normal}"
       echo -e "${purple}Setting the DOCKER_COMPOSE_VERSION Variable to native${normal}"
@@ -90,7 +91,8 @@ if docker compose > /dev/null 2>&1; then
     fi
 elif docker-compose > /dev/null 2>&1; then
   if ! [[ $(alias docker-compose 2> /dev/null) ]] ; then
-    if docker-compose version --short | grep "^2." > /dev/null 2>&1; then
+    #if docker-compose version --short | grep "^2." > /dev/null 2>&1; then
+	if docker-compose version --short | grep "^[2-9]." > /dev/null 2>&1; then
       COMPOSE_VERSION=standalone
       echo -e "${purple}Found Docker Compose Standalone.${normal}"
       echo -e "${purple}Setting the DOCKER_COMPOSE_VERSION Variable to standalone${normal}"
